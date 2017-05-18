@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="js/jquery.js"></script>
+</head>
+<body>
+    <p>星星塔基礎練習</p>
+    <P>Please enter the sign you want below</P>
+    <input type="text" id="enter"/>
+    <button type="button" id="button">click</button>
+    <script type="text/javascript">
+        $("#button").click( function () {
+            $("#answer").empty();
+            $("#answer").append( "Answer：" + "<br>");
+            var s = "";
+            var e = $("#enter").prop("value");
+            
+            if ( e == "") {
+                $("#enter").prop("placeholder", "enter any sign or word");
+            } 
+            else {
+                for ( var i = 0; i <= 4; i++) {
+                    s += e;
+                    $("#answer").append( s + "<br>");
+                }
+            }
+        })
+    </script>
+    <hr>
+    <div id="answer">Answer：<br></div>
+</body>
+</html>
